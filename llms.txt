@@ -1,0 +1,25 @@
+# Crate
+
+Crate is for the records you already own. It is a listening companion, not a streamer and not a shop.
+
+Marketing: https://hello.crate.rocks
+App: https://crate.rocks
+What: https://crate.rocks/what
+Guides: https://crate.rocks/guide
+
+## What it does
+
+- Keep a crate of the copies you actually own
+- Pull one record for tonight
+- Log a spin
+- Read liner notes generated for that album. First write costs a note. Then that sleeve keeps them.
+- Keep a journal of the night
+- Anonymously recommend a record to someone who owns it
+
+## What it is not
+
+Not a playlist. Not Discogs with a new coat of paint. Not an app you download. Open it on the phone, the tablet, or the computer beside the platter.
+
+## Pricing
+
+Free to join. No card. Membership is $9.99 a year: the whole shelf, three notes each month, unused notes through the year, up to ten becoming golden when the year turns.
