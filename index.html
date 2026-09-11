@@ -1,1 +1,252 @@
-SEE_DISK
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crate — for the vinyl you own</title>
+  <meta name="description" content="You bought the records. Play one tonight. Crate remembers the shelf, puts one on, and keeps the story of the spin.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Crate">
+  <meta property="og:title" content="Crate — for the vinyl you own">
+  <meta property="og:description" content="You bought the records. Play one tonight. Crate remembers the shelf, puts one on, and keeps the story of the spin.">
+  <meta property="og:url" content="https://hello.crate.rocks">
+  <meta property="og:image" content="https://crate.rocks/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://hello.crate.rocks">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #0c0b0a; color: #f3eee6; font-family: Outfit, system-ui, sans-serif; line-height: 1.6; }
+    main { max-width: 42rem; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+    .kicker { font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: #9c948a; font-weight: 500; }
+    h1, h2, h3 { font-family: Fraunces, "Times New Roman", serif; font-weight: 500; letter-spacing: -0.02em; color: #f3eee6; }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 1.1rem 0 0; line-height: 1.15; }
+    h2 { font-size: 1.55rem; margin: 3rem 0 0.75rem; scroll-margin-top: 1.25rem; }
+    h3 { font-size: 1.15rem; margin: 1.6rem 0 0.4rem; }
+    .sub { font-family: Fraunces, "Times New Roman", serif; font-size: clamp(1.4rem, 3vw, 1.85rem); margin: 0.6rem 0 0; color: #f3eee6; }
+    p { color: #9c948a; max-width: 38rem; }
+    ul { color: #9c948a; padding-left: 1.15rem; max-width: 38rem; }
+    li { margin: 0.35rem 0; }
+    .join {
+      display: inline-flex; align-items: center; height: 2.75rem; padding: 0 1.5rem;
+      border-radius: 999px; background: #ece4d6; color: #0c0b0a; text-decoration: none; font-size: 0.9rem; font-weight: 500;
+    }
+    .jumps {
+      display: flex; flex-wrap: wrap; gap: 0.35rem 1.15rem; margin: 0.35rem 0 0; padding: 0;
+      font-size: 0.9rem;
+    }
+    .jumps a { color: #9c948a; text-decoration: none; }
+    .jumps a:hover, footer a:hover { color: #f3eee6; }
+    figure { margin: 2rem 0 0; border: 1px solid #2a2622; border-radius: 1rem; overflow: hidden; background: #141210; }
+    figure img, figure video { display: block; width: 100%; height: auto; }
+    figure.reel { max-width: 22rem; margin-left: auto; margin-right: auto; background: #000; }
+    figcaption { padding: 0.75rem 1rem; color: #9c948a; font-size: 0.9rem; }
+    table { width: 100%; min-width: 30rem; border-collapse: collapse; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.85rem 1rem; border-bottom: 1px solid #2a2622; vertical-align: top; }
+    th { color: #f3eee6; font-weight: 500; }
+    td { color: #9c948a; }
+    thead th { color: #6e675f; background: #141210; }
+    .box { margin-top: 1rem; border: 1px solid #2a2622; border-radius: 1rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .sleeve { margin: 1rem 0 0; padding: 1.15rem 1.15rem 0.35rem; border: 1px solid #2a2622; border-radius: 1rem; background: #141210; max-width: 38rem; }
+    .sleeve .album { font-family: Fraunces, "Times New Roman", serif; font-size: 1.35rem; margin: 0; color: #f3eee6; font-weight: 500; }
+    .sleeve .meta { color: #6e675f; font-size: 0.8rem; margin: 0.25rem 0 1rem; }
+    .sleeve p { color: #cfc6ba; }
+    .note { font-size: 0.85rem; color: #6e675f; margin: 0.45rem 0 0; }
+    .fine { margin-top: 2rem; font-size: 0.75rem; color: #6e675f; }
+    .fine a { color: #9c948a; text-decoration: none; }
+    .cta { margin: 1.75rem 0 0; }
+    footer { margin-top: 2.5rem; }
+    @media (max-width: 40rem) {
+      th, td { padding: 0.7rem 0.75rem; }
+      table { font-size: 0.85rem; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Crate — for the vinyl you own",
+    "url": "https://hello.crate.rocks",
+    "description": "Crate is a home for the vinyl records you already own. Remember the shelf, play one tonight, read liner notes while it spins, keep a journal.",
+    "isPartOf": { "@type": "WebSite", "name": "Crate", "url": "https://crate.rocks" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Crate",
+      "url": "https://crate.rocks",
+      "logo": { "@type": "ImageObject", "url": "https://crate.rocks/og.jpg" }
+    },
+    "about": {
+      "@type": "Product",
+      "name": "Crate",
+      "brand": { "@type": "Brand", "name": "Crate" },
+      "category": "Vinyl listening companion",
+      "description": "Software for people who own vinyl records. A crate of copies you own, a Tonight pick, liner notes, a journal of spins, and anonymous recommendations to other owners.",
+      "offers": [
+        { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Membership", "price": "9.99", "priceCurrency": "USD", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "9.99", "priceCurrency": "USD", "unitText": "YEAR" } }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <main>
+    <p class="kicker">Crate</p>
+    <h1>You bought the records.</h1>
+    <p class="sub">Play one tonight.</p>
+    <p>Crate is for the vinyl you own. Not a playlist. Not a shop. Not Discogs with a new coat of paint. It remembers what’s on the shelf, picks a copy that’s been waiting, and keeps the story of every spin.</p>
+    <p class="cta"><a class="join" href="https://crate.rocks/login">Join free</a></p>
+    <p class="note">Join is free. No card. Membership cancels on your account.</p>
+    <p class="jumps">
+      <a href="#tonight">Tonight</a>
+      <a href="#crate">The crate</a>
+      <a href="#membership">Free and membership</a>
+    </p>
+    <figure>
+      <img src="https://crate.rocks/guide/tonight-pulled.jpg" width="1280" height="860" alt="Tonight on Crate with a record on the platter and a reason it was pulled.">
+      <figcaption>Tonight. One copy on the platter. Stay in the chair.</figcaption>
+    </figure>
+    <figure class="reel">
+      <video src="https://crate.rocks/guide/crate-intro-reel-v5.mp4" width="1080" height="1920" controls playsinline preload="metadata"></video>
+      <figcaption>Ten seconds. One record on.</figcaption>
+    </figure>
+    <p>The real enemy isn’t Spotify. It’s standing in front of the shelf thinking, what the hell do I play tonight? Too many records. The same thirty keep winning. The rest sit. Crate puts one on and you stay in the chair.</p>
+    <p>I built it because I love vinyl and I kept realizing I was listening to the same records while hundreds sat there. Made by a listener. Not a corporation. This is the thing I wanted beside the turntable.</p>
+    <h2>What Crate is</h2>
+    <p>Crate is a listening companion for people who already own records. You add the copies on your shelf. Crate does three jobs:</p>
+    <ul>
+      <li>It remembers the crate — every LP you actually own.</li>
+      <li>It picks one for tonight, with a reason: neglected, a note from a friend, you’ve been living in one artist, a record you bought and never played.</li>
+      <li>It keeps the night — a spin log, grades, a journal, and liner notes you can read while Side A runs.</li>
+    </ul>
+    <p>Adding a record means you own it. Putting it on means you’re listening. Logging the spin means you actually played it. Crate never pretends a click is a play. There is no way to know if you really put the needle down. Logging is honest because you do it on purpose.</p>
+    <h2>What it is not</h2>
+    <ul>
+      <li>Not a streamer. No playlists, no algorithm radio, no “discover weekly.”</li>
+      <li>Not a shop. No cart. No marketplace. Record stores are partners, not competitors we replace.</li>
+      <li>Not a catalog of everything ever pressed. Discogs already does that. Crate is the copies in your room.</li>
+      <li>Not social. Recommendations are anonymous. No feed, no likes, no leaderboard of hours listened. We do not count spins toward “top fan” because we cannot know if you really played it. We know if you wrote the sleeve or vouched a copy to someone else.</li>
+    </ul>
+    <p>No app to download. Open Crate on the phone in your hand, the tablet on the table, or the computer beside the platter. It is a site, on purpose.</p>
+    <h2 id="tonight">Tonight</h2>
+    <p>Tonight is the platter. One record at a time. When you sign in, Crate pulls a copy from your crate and tells you why that one, not another:</p>
+    <ul>
+      <li>You bought this and have not played it.</li>
+      <li>You have not played this in a while — days, not “recently.”</li>
+      <li>You’ve been living with one artist. Here’s another lane from the same shelf.</li>
+      <li>Someone who owns this copy, and loves it, sent a quiet note. It waits until the album is in your crate, then it can appear on Tonight. The same person will not land that album on the same listener more than once every four months.</li>
+    </ul>
+    <p>From Tonight you can log the spin, open liner notes, recommend the copy, or add a record you already know you want to hear — it goes on the platter. You still have to log it. Adding is owning. Putting on is listening.</p>
+    <p>If you already have that album, Crate says so and offers the natural next move: put this on tonight. Spreadsheet and Discogs imports only add what is not already there. If several new copies come in at once, one of them lands on the platter.</p>
+    <p>The point is simple: the records you already bought get played, not just owned.</p>
+    <h2 id="crate">The crate</h2>
+    <p>The crate is the shelf. Every copy you own, as jackets. Search with Any, or lock to Artist, Album, Genre, or Year released (original US year, not the repress year). Type Jazz under Any and you get your Jazz records plus Queen’s Jazz and anyone with Jazz in the name. Type Jazz under Genre and you only get the genre. Year is 1970 the year the album came out.</p>
+    <p>Bring the shelf in three ways:</p>
+    <ul>
+      <li>Discogs — connect the door. Free accounts load the first 200 if the collection is larger. Membership loads the rest.</li>
+      <li>A spreadsheet — artist and album. Cover art fills in while you keep crate.rocks open.</li>
+      <li>Search or type one copy. Original year, not a 2008 repress. Cover from the master when we can find it.</li>
+    </ul>
+    <p>Correct a typo on the shelf. If the correction matches a copy you already have: keep a duplicate, or delete this one. Remove a copy; nights you already logged stay in the journal. Randomize shuffles the grid. A–Z lines it up by artist, skipping a leading “The,” then album title. Refresh and you’re back to newest added first. Membership can export the crate as a spreadsheet — as filtered and sorted on the screen.</p>
+    <figure>
+      <img src="https://crate.rocks/facebook/ad-feed-1080.png" width="1080" height="1080" alt="A crate of album jackets.">
+      <figcaption>The crate is what you own. Search it. Put one on.</figcaption>
+    </figure>
+    <h2>Log this spin</h2>
+    <p>When the side is on, log it. The night keeps:</p>
+    <ul>
+      <li>Cover, artist, album</li>
+      <li>Your rating of the music</li>
+      <li>Vinyl grade and sleeve grade (condition from Discogs on first pull, then yours)</li>
+      <li>Side</li>
+      <li>Mood / situation — Bedtime, Background, Coffee, Chores, Dance, Deep Listening, Lunch, Morning, Pool, Sex, Sleep, Studying, System Testing, and the rest, A–Z</li>
+      <li>Notes from the chair</li>
+      <li>Whether liner notes were written</li>
+      <li>Genre, if you update it — Discogs genre on first pull, then it stays yours</li>
+    </ul>
+    <p>Those fields persist. They show on Tonight. They write into the journal. A record played today does not keep saying “tonight” tomorrow. It becomes yesterday, then two days ago, and so on.</p>
+    <figure>
+      <img src="https://crate.rocks/guide/log-spin.jpg" width="1280" height="860" alt="Log this spin: rating, vinyl and sleeve grade, side, mood, notes.">
+      <figcaption>Log this spin. You say you played it. Crate writes it down.</figcaption>
+    </figure>
+    <h2>Liner notes</h2>
+    <p>The jacket is in your hands. One side is on the platter. Crate writes the essay that should have been in the sleeve: the sessions, the band at that moment, production and the cut, Side A, Side B and after. Read it while it spins. Not a Wikipedia page. Not a review. Not a tracklist dump. Crate generates it for that album. Once it is written, it stays on the sleeve.</p>
+    <p>The first write costs a note, once. After that the sleeve is on your shelf forever. The number at the top is what you have left. It drops when you create the note, not when you look at the crate. Members get 3 notes a month. Unused stack through the year. Up to 10 become golden when the year turns. Free starts with 3. Invites and shops can add more.</p>
+    <p>Whoever wrote the liner notes, and whoever vouches the album to other owners, builds fan points on that record. Writing the sleeve is 3. Each recommendation is 1. Highest total is Vouched. Hover the name on Tonight or in the notes and you see their last recommendation, or that they wrote the liner notes. Ties stay with whoever got there first. We do not sell the title. We do not bid notes for it.</p>
+    <figure>
+      <img src="https://crate.rocks/guide/notes-sleeve.jpg" width="1280" height="860" alt="Liner notes open beside a record, chapter by chapter.">
+      <figcaption>Liner notes. Read them while the side runs.</figcaption>
+    </figure>
+    <div class="sleeve">
+      <p class="album">bitches brew</p>
+      <p class="meta">miles davis · 1970 · 1,546 words</p>
+      <p>Columbia Studio B on East 49th Street took the Bitches Brew booking across three August days in 1969, the year before the 1970 jackets. Teo Macero produced.</p>
+      <p>Miles Davis led trumpet. Wayne Shorter brought soprano. Bennie Maupin sat on bass clarinet. Chick Corea and Joe Zawinul both played electric piano. John McLaughlin was on guitar. Dave Holland and Harvey Brooks covered bass. Lenny White, Jack DeJohnette, Don Alias, and Jumma Santos (Jim Riley) were the percussionists named for the dates.</p>
+      <p>Who finished a take was Davis in the room; who finished the record was Macero with a razor.</p>
+      <p>Side A of the original 1970 two-disc set is a single constructed suite, not a stack of 45s and not a concert take left whole. The face is occupied entirely by Pharaoh&rsquo;s Dance.</p>
+      <p>Crate generated this sleeve. It stays on the album.</p>
+    </div>
+    <h2>Journal</h2>
+    <p>The journal is the notebook by the chair. Chronological. Persistent. It writes when you:</p>
+    <ul>
+      <li>Log a spin — cover, artist, album, rating, side, mood, notes, liner notes written yes or no</li>
+      <li>Add a record to the crate</li>
+      <li>Pull a copy for tonight</li>
+      <li>Send or receive a recommendation</li>
+      <li>Buy golden notes</li>
+      <li>Start or renew membership, and when membership notes land for a new month</li>
+    </ul>
+    <p>Membership can download the journal as a spreadsheet.</p>
+    <figure>
+      <img src="https://crate.rocks/guide/journal.jpg" width="1280" height="860" alt="The Crate journal, a chronological list of nights and shelf events.">
+      <figcaption>The journal. The night, written down.</figcaption>
+    </figure>
+    <h2>Recommend</h2>
+    <p>Anonymously recommend a record you own to a fellow vinyl lover who owns the record but has not spun it in a while. One free recommend a day on membership; after that it costs a note. You can recommend the same album as often as you like. The receiving crate only sees that album from you once every four months, so the note spreads around instead of haunting one person.</p>
+    <p>The recommendation is held until they add the album. Then it can appear on their Tonight with the note. They can dismiss the note for good.</p>
+    <p>Members also get three album picks based on who they actually played this month: acclaimed studio albums by those artists that are not in the crate, then live, then similar artists. After a set of three, you spin ten more before a new set. The three stay until then.</p>
+    <figure>
+      <img src="https://crate.rocks/guide/pulse-recs.jpg" width="1280" height="860" alt="Recommendations on Pulse: a note from another owner, and three picks from this month’s plays.">
+      <figcaption>A note from someone who owns it too. And three picks from who you played this month.</figcaption>
+    </figure>
+    <h2>Notes and golden notes</h2>
+    <p>Notes are the unit. You spend one to write a liner note the first time, or to send an extra recommendation after the free daily one. Golden notes are leftover membership notes that become golden at the year turn (up to 10), plus notes you buy, plus notes from invites and shops.</p>
+    <p>New accounts start with 3 notes. Invite a friend by email: they get 10 extra notes when they join as a new person. You get 10 golden if they use them. We do not store their information and will not send them anything but those free notes. If that email is already on Crate, we say so and do not send.</p>
+    <p>Golden packs start at $5 for 40 and go up if someone wants more than 500. Membership is $9.99 a year. No monthly. Manage billing on the account page — update the card or cancel through Stripe. If membership ends we do not delete the extra copies. 200 stay on the crate. The rest wait until you renew.</p>
+    <h2>Record shops</h2>
+    <p>Friendly local shops can have a door: a page with their name, hours, address, and a join. People who come in that door get 10 golden notes. On the account page, a listener can let a shop look at their crate by account number only — no name, no email. In the store they give the number. The shop sees the crate so a human can pull a copy they don’t have, or learn the room. The shop can post a sale, a coupon, a night, on the listener’s account page, not across the whole site. Crate is not a storefront. The shop strip lives with the relationship, not on Tonight.</p>
+    <h2 id="membership">Free and membership</h2>
+    <p>Free is a real crate. Membership is the whole shelf, liner notes that come back every month, unused notes that stack, up to 10 golden at the year turn, recommend, and export. If the Discogs collection is bigger than 200, a free account loads the first 200. Membership loads the rest.</p>
+    <div class="box">
+      <table>
+        <thead>
+          <tr><th></th><th>Free</th><th>Membership</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Records on the shelf</th><td>200</td><td>Every copy you own</td></tr>
+          <tr><th>Liner notes</th><td>3 to start, plus invites</td><td>3 every month. Unused stack. Up to 10 become golden at the year turn</td></tr>
+          <tr><th>Recommend a record you own</th><td>—</td><td>One free a day. Then a note</td></tr>
+          <tr><th>Three picks from this month’s plays</th><td>—</td><td>Members. Ten more spins for a new set</td></tr>
+          <tr><th>Export crate and journal</th><td>—</td><td>Spreadsheet, as you see it</td></tr>
+          <tr><th>Discogs, spreadsheet, search, type</th><td>Yes, up to 200</td><td>The whole shelf</td></tr>
+          <tr><th>Price</th><td>Free</td><td>$9.99 a year</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The crate is yours. Membership can export it. We do not store your card.</p>
+    <h2>Who it is for</h2>
+    <p>People who own vinyl and still want to listen to it. Collectors with a wall they cannot see past. Listeners who want the sleeve essay while Side A runs. Shop regulars who will let a trusted counter look at the crate by number. Not for people building playlists. Not for people hunting copies to flip. Not for people who want a social network of listening.</p>
+    <p>Join is free. Add three copies if you come in by hand; Discogs or a list will do the whole shelf at once. Then play one tonight.</p>
+    <p class="cta"><a class="join" href="https://crate.rocks/login">Join free</a></p>
+    <p class="note">Join is free. No card. Membership cancels on your account.</p>
+    <footer>
+      <p class="fine"><a href="#membership">Membership</a> · <a href="/about">About</a> · <a href="https://crate.rocks/terms">Terms</a> · <a href="https://crate.rocks/guide">How</a> · <a href="https://crate.rocks/contact">Contact</a> · crate.rocks · for the vinyl you own · by vinyl fans, for vinyl fans</p>
+    </footer>
+  </main>
+</body>
+</html>
