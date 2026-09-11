@@ -25,18 +25,14 @@
     body { margin: 0; background: #0c0b0a; color: #f3eee6; font-family: Outfit, system-ui, sans-serif; line-height: 1.6; }
     main { max-width: 42rem; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
     .kicker { font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: #9c948a; font-weight: 500; }
-    h1, h2, h3 { font-family: Fraunces, "Times New Roman", serif; font-weight: 500; letter-spacing: -0.02em; color: #f3eee6; }
+    h1, h2 { font-family: Fraunces, "Times New Roman", serif; font-weight: 500; letter-spacing: -0.02em; color: #f3eee6; }
     h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 1.1rem 0 0; line-height: 1.15; }
     h2 { font-size: 1.55rem; margin: 3rem 0 0.75rem; scroll-margin-top: 1.25rem; }
-    h3 { font-size: 1.15rem; margin: 1.6rem 0 0.4rem; }
     .sub { font-family: Fraunces, "Times New Roman", serif; font-size: clamp(1.4rem, 3vw, 1.85rem); margin: 0.6rem 0 0; color: #f3eee6; }
     p { color: #9c948a; max-width: 38rem; }
     ul { color: #9c948a; padding-left: 1.15rem; max-width: 38rem; }
     li { margin: 0.35rem 0; }
-    .join {
-      display: inline-flex; align-items: center; height: 2.75rem; padding: 0 1.5rem;
-      border-radius: 999px; background: #ece4d6; color: #0c0b0a; text-decoration: none; font-size: 0.9rem; font-weight: 500;
-    }
+    .join { display: inline-flex; align-items: center; height: 2.75rem; padding: 0 1.5rem; border-radius: 999px; background: #ece4d6; color: #0c0b0a; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
     .jumps { display: flex; flex-wrap: wrap; gap: 0.35rem 1.15rem; margin: 0.35rem 0 0; padding: 0; font-size: 0.9rem; }
     .jumps a { color: #9c948a; text-decoration: none; }
     .jumps a:hover, footer a:hover { color: #f3eee6; }
@@ -49,19 +45,13 @@
     th { color: #f3eee6; font-weight: 500; }
     td { color: #9c948a; }
     thead th { color: #6e675f; background: #141210; }
-    .box { margin-top: 1rem; border: 1px solid #2a2622; border-radius: 1rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .sleeve { margin: 1rem 0 0; padding: 1.15rem 1.15rem 0.35rem; border: 1px solid #2a2622; border-radius: 1rem; background: #141210; max-width: 38rem; }
-    .sleeve .album { font-family: Fraunces, "Times New Roman", serif; font-size: 1.35rem; margin: 0; color: #f3eee6; font-weight: 500; }
-    .sleeve .meta { color: #6e675f; font-size: 0.8rem; margin: 0.25rem 0 1rem; }
-    .sleeve p { color: #cfc6ba; }
+    .box { margin-top: 1rem; border: 1px solid #2a2622; border-radius: 1rem; overflow-x: auto; }
     .note { font-size: 0.85rem; color: #6e675f; margin: 0.45rem 0 0; }
     .fine { margin-top: 2rem; font-size: 0.75rem; color: #6e675f; }
     .fine a { color: #9c948a; text-decoration: none; }
     .cta { margin: 1.75rem 0 0; }
     footer { margin-top: 2.5rem; }
-    @media (max-width: 40rem) { th, td { padding: 0.7rem 0.75rem; } table { font-size: 0.85rem; } }
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Crate — for the vinyl you own","url":"https://hello.crate.rocks"}</script>
 </head>
 <body>
   <main>
@@ -71,19 +61,50 @@
     <p>Crate is for the vinyl you own. Not a playlist. Not a shop. Not Discogs with a new coat of paint. It remembers what’s on the shelf, picks a copy that’s been waiting, and keeps the story of every spin.</p>
     <p class="cta"><a class="join" href="https://crate.rocks/login">Join free</a></p>
     <p class="note">Join is free. No card. Membership cancels on your account.</p>
-    <p class="jumps">
-      <a href="#tonight">Tonight</a>
-      <a href="#crate">The crate</a>
-      <a href="#membership">Free and membership</a>
-    </p>
+    <p class="jumps"><a href="#tonight">Tonight</a> <a href="#crate">The crate</a> <a href="#membership">Free and membership</a></p>
     <figure>
       <img src="https://crate.rocks/guide/tonight-pulled.jpg" width="1280" height="860" alt="Tonight on Crate with a record on the platter and a reason it was pulled.">
       <figcaption>Tonight. One copy on the platter. Stay in the chair.</figcaption>
     </figure>
-    <p>The real enemy isn’t Spotify. It’s standing in front of the shelf thinking, what the hell do I play tonight?</p>
+    <figure class="reel">
+      <video src="https://crate.rocks/guide/crate-intro-reel-v5.mp4" width="1080" height="1920" controls playsinline preload="metadata"></video>
+      <figcaption>Ten seconds. One record on.</figcaption>
+    </figure>
+    <p>The real enemy isn’t Spotify. It’s standing in front of the shelf thinking, what the hell do I play tonight? Too many records. The same thirty keep winning. The rest sit. Crate puts one on and you stay in the chair.</p>
+    <p>I built it because I love vinyl and I kept realizing I was listening to the same records while hundreds sat there. Made by a listener. Not a corporation.</p>
+    <h2>What Crate is</h2>
+    <ul>
+      <li>It remembers the crate — every LP you actually own.</li>
+      <li>It picks one for tonight, with a reason.</li>
+      <li>It keeps the night — a spin log, liner notes, a journal.</li>
+    </ul>
+    <h2>What it is not</h2>
+    <ul>
+      <li>Not a streamer. Not a shop. Not Discogs with a new coat of paint.</li>
+      <li>Not social. Recommendations are anonymous.</li>
+    </ul>
+    <p>No app to download. It is a site, on purpose.</p>
+    <h2 id="tonight">Tonight</h2>
+    <p>Tonight is the platter. One record at a time.</p>
+    <h2 id="crate">The crate</h2>
+    <p>The crate is the shelf. Every copy you own.</p>
+    <h2 id="membership">Free and membership</h2>
+    <p>Free is a real crate. Membership is $9.99 a year. Every copy you own. 3 liner notes each month. Unused stack. Up to 10 become golden one year from the day you paid. One free recommend a day. Export.</p>
+    <div class="box">
+      <table>
+        <thead><tr><th></th><th>Free</th><th>Membership</th></tr></thead>
+        <tbody>
+          <tr><th>Records on the shelf</th><td>200</td><td>Every copy you own</td></tr>
+          <tr><th>Liner notes</th><td>3 to start</td><td>3 every month. Unused stack. Up to 10 golden at the paid-date year</td></tr>
+          <tr><th>Recommend</th><td>—</td><td>One free a day</td></tr>
+          <tr><th>Export</th><td>—</td><td>Crate and journal</td></tr>
+          <tr><th>Price</th><td>Free</td><td>$9.99 a year</td></tr>
+        </tbody>
+      </table>
+    </div>
     <p class="cta"><a class="join" href="https://crate.rocks/login">Join free</a></p>
     <footer>
-      <p class="fine"><a href="#membership">Membership</a> · <a href="/about">About</a> · <a href="https://crate.rocks/terms">Terms</a> · crate.rocks</p>
+      <p class="fine"><a href="#membership">Membership</a> · <a href="/about">About</a> · <a href="https://crate.rocks/terms">Terms</a> · <a href="https://crate.rocks/guide">How</a> · crate.rocks</p>
     </footer>
   </main>
 </body>
