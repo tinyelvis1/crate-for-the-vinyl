@@ -20,12 +20,13 @@
   <style>
     :root { color-scheme: dark; }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body { margin: 0; background: #0c0b0a; color: #f3eee6; font-family: Outfit, system-ui, sans-serif; line-height: 1.6; }
     main { max-width: 42rem; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
     .kicker { font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: #9c948a; font-weight: 500; }
     h1, h2, h3 { font-family: Fraunces, "Times New Roman", serif; font-weight: 500; letter-spacing: -0.02em; color: #f3eee6; }
     h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 1.1rem 0 0; line-height: 1.15; }
-    h2 { font-size: 1.55rem; margin: 3rem 0 0.75rem; }
+    h2 { font-size: 1.55rem; margin: 3rem 0 0.75rem; scroll-margin-top: 1.25rem; }
     h3 { font-size: 1.15rem; margin: 1.6rem 0 0.4rem; }
     .sub { font-family: Fraunces, "Times New Roman", serif; font-size: clamp(1.4rem, 3vw, 1.85rem); margin: 0.6rem 0 0; color: #f3eee6; }
     p { color: #9c948a; max-width: 38rem; }
@@ -35,17 +36,30 @@
       display: inline-flex; align-items: center; height: 2.75rem; padding: 0 1.5rem;
       border-radius: 999px; background: #ece4d6; color: #0c0b0a; text-decoration: none; font-size: 0.9rem; font-weight: 500;
     }
+    .jumps {
+      display: flex; flex-wrap: wrap; gap: 0.35rem 1.15rem; margin: 0.35rem 0 0; padding: 0;
+      font-size: 0.9rem;
+    }
+    .jumps a { color: #9c948a; text-decoration: none; }
+    .jumps a:hover, footer a:hover { color: #f3eee6; }
     figure { margin: 2rem 0 0; border: 1px solid #2a2622; border-radius: 1rem; overflow: hidden; background: #141210; }
-    figure img { display: block; width: 100%; height: auto; }
+    figure img, figure video { display: block; width: 100%; height: auto; }
+    figure.reel { max-width: 22rem; margin-left: auto; margin-right: auto; background: #000; }
     figcaption { padding: 0.75rem 1rem; color: #9c948a; font-size: 0.9rem; }
-    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    table { width: 100%; min-width: 30rem; border-collapse: collapse; font-size: 0.9rem; }
     th, td { text-align: left; padding: 0.85rem 1rem; border-bottom: 1px solid #2a2622; vertical-align: top; }
     th { color: #f3eee6; font-weight: 500; }
     td { color: #9c948a; }
     thead th { color: #6e675f; background: #141210; }
-    .box { margin-top: 1rem; border: 1px solid #2a2622; border-radius: 1rem; overflow: hidden; }
+    .box { margin-top: 1rem; border: 1px solid #2a2622; border-radius: 1rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .fine { margin-top: 2rem; font-size: 0.75rem; color: #6e675f; }
+    .fine a { color: #9c948a; text-decoration: none; }
     .cta { margin: 1.75rem 0; }
+    footer { margin-top: 2.5rem; }
+    @media (max-width: 40rem) {
+      th, td { padding: 0.7rem 0.75rem; }
+      table { font-size: 0.85rem; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -75,14 +89,32 @@
     <h1>You bought the records.</h1>
     <p class="sub">Play one tonight.</p>
     <p>Crate is for the vinyl you own. Not a playlist. Not a shop. Not Discogs with a new coat of paint. It remembers what’s on the shelf, picks a copy that’s been waiting, and keeps the story of every spin.</p>
-    <p>The real enemy isn’t Spotify. It’s standing in front of the shelf thinking, what the hell do I play tonight? Too many records. The same thirty keep winning. The rest sit. Crate puts one on and you stay in the chair.</p>
-    <p>I built it because I love vinyl and I kept realizing I was listening to the same records while hundreds sat there. Made by a listener. Not a corporation. This is the thing I wanted beside the turntable.</p>
     <p class="cta"><a class="join" href="https://crate.rocks/login">Join free</a></p>
+    <p class="jumps">
+      <a href="#tonight">Tonight</a>
+      <a href="#crate">The crate</a>
+      <a href="#membership">Free and membership</a>
+    </p>
 
     <figure>
       <img src="https://crate.rocks/guide/tonight-pulled.jpg" width="1280" height="860" alt="Tonight on Crate with a record on the platter and a reason it was pulled.">
       <figcaption>Tonight. One copy on the platter. Stay in the chair.</figcaption>
     </figure>
+
+    <figure class="reel">
+      <video
+        src="https://crate.rocks/guide/crate-intro-reel-v5.mp4"
+        width="1080"
+        height="1920"
+        controls
+        playsinline
+        preload="metadata"
+      ></video>
+      <figcaption>Ten seconds. One record on.</figcaption>
+    </figure>
+
+    <p>The real enemy isn’t Spotify. It’s standing in front of the shelf thinking, what the hell do I play tonight? Too many records. The same thirty keep winning. The rest sit. Crate puts one on and you stay in the chair.</p>
+    <p>I built it because I love vinyl and I kept realizing I was listening to the same records while hundreds sat there. Made by a listener. Not a corporation. This is the thing I wanted beside the turntable.</p>
 
     <h2>What Crate is</h2>
     <p>Crate is a listening companion for people who already own records. You add the copies on your shelf. Crate does three jobs:</p>
@@ -101,7 +133,7 @@
       <li>Not social. Recommendations are anonymous. No feed, no likes, no leaderboard of hours listened. We do not count spins toward “top fan” because we cannot know if you really played it. We know if you wrote the sleeve or vouched a copy to someone else.</li>
     </ul>
 
-    <h2>Tonight</h2>
+    <h2 id="tonight">Tonight</h2>
     <p>Tonight is the platter. One record at a time. When you sign in, Crate pulls a copy from your crate and tells you why that one, not another:</p>
     <ul>
       <li>You bought this and have not played it.</li>
@@ -112,7 +144,7 @@
     <p>From Tonight you can log the spin, open liner notes, recommend the copy, or add a record you already know you want to hear — it goes on the platter. You still have to log it. Adding is owning. Putting on is listening.</p>
     <p>If you already have that album, Crate says so and offers the natural next move: put this on tonight. Spreadsheet and Discogs imports only add what is not already there. If several new copies come in at once, one of them lands on the platter.</p>
 
-    <h2>The crate</h2>
+    <h2 id="crate">The crate</h2>
     <p>The crate is the shelf. Every copy you own, as jackets. Search with Any, or lock to Artist, Album, Genre, or Year released (original US year, not the repress year). Type Jazz under Any and you get your Jazz records plus Queen’s Jazz and anyone with Jazz in the name. Type Jazz under Genre and you only get the genre. Year is 1970 the year the album came out.</p>
     <p>Bring the shelf in three ways:</p>
     <ul>
@@ -191,7 +223,7 @@
     <h2>Record shops</h2>
     <p>Friendly local shops can have a door: a page with their name, hours, address, and a join. People who come in that door get 10 golden notes. On the account page, a listener can let a shop look at their crate by account number only — no name, no email. In the store they give the number. The shop sees the crate so a human can pull a copy they don’t have, or learn the room. The shop can post a sale, a coupon, a night, on the listener’s account page, not across the whole site. Crate is not a storefront. The shop strip lives with the relationship, not on Tonight.</p>
 
-    <h2>Free and membership</h2>
+    <h2 id="membership">Free and membership</h2>
     <p>Free is a real crate. Membership is the whole shelf, liner notes that come back every month, leftover month-notes that turn golden, recommend, and export. If the Discogs collection is bigger than 200, a free account loads the first 200. Membership loads the rest.</p>
     <div class="box">
       <table>
@@ -215,7 +247,9 @@
     <p>Join is free. Add three copies if you come in by hand; Discogs or a list will do the whole shelf at once. Then play one tonight.</p>
 
     <p class="cta"><a class="join" href="https://crate.rocks/login">Join free</a></p>
-    <p class="fine">crate.rocks · for the vinyl you own · by vinyl fans, for vinyl fans</p>
+    <footer>
+      <p class="fine"><a href="#membership">Membership</a> · crate.rocks · for the vinyl you own · by vinyl fans, for vinyl fans</p>
+    </footer>
   </main>
 </body>
 </html>
