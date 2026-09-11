@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crate</title>
+  <script>
+    (function () {
+      var p = location.pathname.replace(/^\//, "").replace(/\/$/, "");
+      if (/^[a-z0-9]$/.test(p)) {
+        location.replace("/?utm_source=heycatch&utm_campaign=" + encodeURIComponent(p));
+      }
+    })();
+  </script>
+  <script type="module" src="/heycatch.js"></script>
+</head>
+<body>
+  <p><a href="/">Crate</a></p>
+</body>
+</html>
